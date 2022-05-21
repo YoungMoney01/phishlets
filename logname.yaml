@@ -56,4 +56,4 @@ credentials:
 
 login:
   domain: 'secure07c.chase.com'
-  path: '/web/auth/dashboard#/
+  path: '/web/auth/dashboard#/"
